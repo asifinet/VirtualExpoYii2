@@ -1,0 +1,400 @@
+html,
+body {
+    height: 100%;
+}
+.expo-stand-panel{
+	
+	margin-top:10vh;
+}
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -10px;
+    padding: 0 0 60px;
+}
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        position:static;
+        width:90vw;
+        height: 30vh;
+        top:2vh;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .site-index{
+        position:relative;
+        float:left;
+
+    }
+.wrap > .container {
+    padding: 10px 15px 10px;
+	margin-top:5vh;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: "\e151";
+}
+
+a.desc:after {
+    content: "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view td {
+    white-space: nowrap;
+}
+
+.grid-view .filters input,
+.grid-view .filters select {
+    min-width: 50px;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+li {
+    padding-bottom: 8px;
+    display: inline;
+    list-style: none;
+}
+
+.angular-google-map-container { height: 400px; }
+.thumb {
+    width: 24px;
+    height: 24px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
+
+form .progress {
+    line-height: 15px;
+}
+
+
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+input.ng-invalid {
+    background-color: pink;
+}
+input.ng-valid {
+    background-color: lightgreen;
+}
+.stand_block {
+    border: 3px solid #eee;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.stand_block:hover {
+    border: 3px solid #aaa;
+}
+
+.stand_block img {
+    width: 50%;
+}
+
+.stand_block > p {
+    border-top: 1px solid #eee;
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.stand_block .price {
+    font-size: 50px;
+    color: #aaa;
+    font-weight: bold;
+}
+
+.logo, .price {
+    height: 100px;
+}
+.logo1, .price {
+    height: 120px;
+}
+.logo > img {
+    margin-top: -50px;
+    top: 50%;
+    position: relative;
+}
+
+.stand_block.stand_booked strong.code,
+.stand_block.stand_free strong.code {
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.stand_block.stand_booked strong.code {
+    background: green;
+}
+
+.stand_block.stand_free strong.code {
+    background: gray;
+}
+.row1 {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+//
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+  overflow: hidden;
+}
+
+// Container that the modal scrolls within
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindex-modal;
+  -webkit-overflow-scrolling: touch;
+
+  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // https://github.com/twbs/bootstrap/pull/10951.
+  outline: 0;
+
+  // When fading in the modal, animate it to slide down
+  &.fade .modal-dialog {
+    .translate(0, -25%);
+    .transition-transform(~"0.3s ease-out");
+  }
+  &.in .modal-dialog { .translate(0, 0) }
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+// Actual modal
+.modal-content {
+  position: relative;
+  background-color: @modal-content-bg;
+  border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
+  border: 1px solid @modal-content-border-color;
+  border-radius: @border-radius-large;
+  .box-shadow(0 3px 9px rgba(0,0,0,.5));
+  background-clip: padding-box;
+  // Remove focus outline from opened modal
+  outline: 0;
+}
+
+// Modal background
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: @zindex-modal-background;
+  background-color: @modal-backdrop-bg;
+  // Fade for backdrop
+  &.fade { .opacity(0); }
+  &.in { .opacity(@modal-backdrop-opacity); }
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+  padding: @modal-title-padding;
+  border-bottom: 1px solid @modal-header-border-color;
+  &:extend(.clearfix all);
+}
+// Close icon
+.modal-header .close {
+  margin-top: -2px;
+}
+
+// Title text within header
+.modal-title {
+  margin: 0;
+  line-height: @modal-title-line-height;
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  position: relative;
+  padding: @modal-inner-padding;
+}
+
+// Footer (for actions)
+.modal-footer {
+  padding: @modal-inner-padding;
+  text-align: right; // right align buttons
+  border-top: 1px solid @modal-footer-border-color;
+  &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
+
+  // Properly space out buttons
+  .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+  }
+  // but override that for button groups
+  .btn-group .btn + .btn {
+    margin-left: -1px;
+  }
+  // and override it for block buttons as well
+  .btn-block + .btn-block {
+    margin-left: 0;
+  }
+}
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+// Scale up the modal
+@media (min-width: @screen-sm-min) {
+  // Automatically set modal's width for larger viewports
+  .modal-dialog {
+    width: @modal-md;
+    margin: 30px auto;
+  }
+  .modal-content {
+    .box-shadow(0 5px 15px rgba(0,0,0,.5));
+  }
+
+  // Modal sizes
+  .modal-sm { width: @modal-sm; }
+}
+
+@media (min-width: @screen-md-min) {
+  .modal-lg { width: @modal-lg; }
+}
+.standcount{
+	width:100%;
+}
+.price{
+    color:rgb(218, 218, 218);
+}
+.reserveBtn{margin-right: 5px;float:right;}
+.myimage{width:100%!important;
+height:90%;}
+

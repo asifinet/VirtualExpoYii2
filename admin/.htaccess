@@ -1,0 +1,16 @@
+Options +FollowSymLinks
+RewriteEngine On
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+RewriteRule ^expo-event/(\d+)*$ ./index.php?expo-event=$1
+RewriteRule ^expo-stand/(\d+)*$ ./index.php?expo-stand=$1
+RewriteRule ^expo-lookup/(\d+)*$ ./index.php?expo-lookup=$1
+RewriteRule ^expo-company/(\d+)*$ ./index.php?expo-company=$1
+RewriteRule ^country/(\d+)*$ ./index.php?country=$1
+RewriteRule ^company/(\d+)*$ ./index.php?r=company=$1
+RewriteRule ^gii/(\d+)*$ ./index.php?gii=$1
+RewriteRule ^login/(\d+)*$ ./index.php?r=site/login=$1
+RewriteRule ^logout(\d+)*$ ./index.php?logout=$1
+RewriteRule ^search/(.*)$ ./search.php?query=$1
